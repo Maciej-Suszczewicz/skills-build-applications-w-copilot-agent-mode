@@ -1,5 +1,4 @@
-import mongoose from 'mongoose';
-import { connectDatabase, disconnectDatabase } from '../database';
+import { connectDatabase, disconnectDatabase, mongoose } from '../database';
 import { Activity, LeaderboardEntry, Team, User, Workout } from '../models';
 
 async function seedDatabase() {

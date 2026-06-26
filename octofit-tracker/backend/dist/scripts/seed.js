@@ -1,9 +1,5 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
 const database_1 = require("../database");
 const models_1 = require("../models");
 async function seedDatabase() {
@@ -17,10 +13,10 @@ async function seedDatabase() {
         models_1.Workout.deleteMany({}),
     ]);
     const userIds = {
-        maya: new mongoose_1.default.Types.ObjectId(),
-        jordan: new mongoose_1.default.Types.ObjectId(),
-        priya: new mongoose_1.default.Types.ObjectId(),
-        diego: new mongoose_1.default.Types.ObjectId(),
+        maya: new database_1.mongoose.Types.ObjectId(),
+        jordan: new database_1.mongoose.Types.ObjectId(),
+        priya: new database_1.mongoose.Types.ObjectId(),
+        diego: new database_1.mongoose.Types.ObjectId(),
     };
     const users = await models_1.User.insertMany([
         {
