@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc -p tsconfig.json",
+    "seed": "npm run build && node dist/scripts/seed.js",
     "start": "node dist/index.js"
   },
   "dependencies": {
